@@ -1,0 +1,22 @@
+.page {
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  max-width: 882px;
+}
+
+@media screen and( min-width:880px) and(max-width:1280) {
+  .page {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 879px) {
+  .page {
+    width: 320px;
+    align-items: center;
+  }
+}
