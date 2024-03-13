@@ -40,13 +40,13 @@
   opacity: 60%;
 }
 
-.element__image_container {
+.element__image-container {
   position: relative;
   display: flex;
   flex-direction: row-reverse;
 }
 
-.element__name_container {
+.element__name-container {
   display: flex;
   justify-content: center;
 }
