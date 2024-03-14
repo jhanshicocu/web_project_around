@@ -61,6 +61,11 @@
   white-space: nowrap;
   overflow: hidden;
 }
+.element__like {
+  background: #fff;
+  border: none;
+}
 .element__like:hover {
   cursor: pointer;
+  opacity: 50%;
 }
