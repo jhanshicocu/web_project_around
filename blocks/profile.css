@@ -49,21 +49,16 @@
 }
 
 .profile__edit-button {
-  width: 24px;
+  margin: 0;
+  padding: 0;
+  border: none;
   height: 24px;
-  border: #fff solid 1px;
   background-color: black;
 }
 
 .profile__edit-button:hover {
   opacity: 60%;
   cursor: pointer;
-}
-
-.profile__edit-button-image {
-  width: 10px;
-  height: 10px;
-  background-color: black;
 }
 
 .profile__add-button {
