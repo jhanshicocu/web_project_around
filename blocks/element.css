@@ -69,6 +69,8 @@
   height: 19px;
   align-self: center;
   opacity: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .element__like:hover {
   opacity: 50%;
@@ -77,8 +79,10 @@
 
 .element__like_active {
   background-image: url(../images/like-activo.png);
+  background-repeat: no-repeat;
   width: 21px;
   height: 19px;
   align-self: center;
   border: none;
+  background-size: cover;
 }
