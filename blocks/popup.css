@@ -13,7 +13,7 @@
 .popup__close-icon {
   display: flex;
   flex-direction: row-reverse;
-  max/width: 75vw;
+  max-width: 75vw;
   width: 513px;
   justify-content: space-between;
 }
