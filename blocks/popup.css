@@ -13,7 +13,9 @@
 .popup__close-icon {
   display: flex;
   flex-direction: row-reverse;
-  width: 505px;
+  max/width: 75vw;
+  width: 513px;
+  justify-content: space-between;
 }
 .popup__close-icon-image:hover {
   cursor: pointer;
@@ -85,6 +87,31 @@
 .popup_opened {
   display: flex;
 }
+
+.popup-image {
+  max-width: 75vw;
+  max-height: 75vh;
+}
+
+.popup__title-image {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  text-align: left;
+  width: 291px;
+  height: 12px;
+}
+
+.popup__close-image {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 967px;
+  padding-left: 40px;
+  min-width: 565px;
+  width: 100%;
+}
+
 @media screen and (min-width: 320px) and (max-width: 879px) {
   .popup__container {
     width: 282px;

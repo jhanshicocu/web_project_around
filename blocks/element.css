@@ -63,10 +63,22 @@
   overflow: hidden;
 }
 .element__like {
-  background: #fff;
   border: none;
+  background-image: url(../images/like.svg);
+  width: 21px;
+  height: 19px;
+  align-self: center;
+  opacity: 100%;
 }
 .element__like:hover {
-  cursor: pointer;
   opacity: 50%;
+  cursor: pointer;
+}
+
+.element__like_active {
+  background-image: url(../images/like-activo.png);
+  width: 21px;
+  height: 19px;
+  align-self: center;
+  border: none;
 }

@@ -40,154 +40,7 @@
           />
         </div>
       </section>
-      <section class="elements">
-        <ul class="elements elements__container">
-          <li class="element">
-            <div class="element__image-container">
-              <img
-                class="element__image"
-                src="./images/Valle-de-Yosemite.jpg"
-                alt="imagen-valle-de-yosemite"
-              />
-              <img
-                class="element__trash"
-                src="./images/trash.png"
-                alt="imagen-basurero"
-              />
-            </div>
-            <div class="element__name-container">
-              <h3 class="element__name">Valle de Yosemite</h3>
-              <button class="element__like" type="submit">
-                <img
-                  class="element__like-image"
-                  src="./images/like.svg"
-                  alt="imagen-corazon"
-                />
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image-container">
-              <img
-                class="element__image"
-                src="./images/lago-louise.jpg"
-                alt="imagen-lago-louise"
-              />
-              <img
-                class="element__trash"
-                src="./images/trash.png"
-                alt="imagen-basurero"
-              />
-            </div>
-            <div class="element__name-container">
-              <h3 class="element__name">Lago Louise</h3>
-              <button class="element__like" type="submit">
-                <img
-                  class="element__like-image"
-                  src="./images/like.svg"
-                  alt="imagen-corazon"
-                />
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image-container">
-              <img
-                class="element__image"
-                src="./images/montanas-calvas.jpg"
-                alt="imagen-Montañas-Calvas"
-              />
-              <img
-                class="element__trash"
-                src="./images/trash.png"
-                alt="imagen-basurero"
-              />
-            </div>
-            <div class="element__name-container">
-              <h3 class="element__name">Montañas Calvas</h3>
-              <button class="element__like" type="submit">
-                <img
-                  class="element__like-image"
-                  src="./images/like.svg"
-                  alt="imagen-corazon"
-                />
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image-container">
-              <img
-                class="element__image"
-                src="./images/Latemar.jpg"
-                alt="imagen-Latemar"
-              />
-              <img
-                class="element__trash"
-                src="./images/trash.png"
-                alt="imagen-basurero"
-              />
-            </div>
-            <div class="element__name-container">
-              <h3 class="element__name">Latemar</h3>
-              <button class="element__like" type="submit">
-                <img
-                  class="element__like-image"
-                  src="./images/like.svg"
-                  alt="imagen-corazon"
-                />
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image-container">
-              <img
-                class="element__image"
-                src="./images/vanoise.jpg"
-                alt="imagen-vanoise"
-              />
-              <img
-                class="element__trash"
-                src="./images/trash.png"
-                alt="imagen-basurero"
-              />
-            </div>
-            <div class="element__name-container">
-              <h3 class="element__name">Vanois National Park</h3>
-              <button class="element__like" type="submit">
-                <img
-                  class="element__like-image"
-                  src="./images/like.svg"
-                  alt="imagen-corazon"
-                />
-              </button>
-            </div>
-          </li>
-          <li class="element">
-            <div class="element__image-container">
-              <img
-                class="element__image"
-                src="./images/Lago-di-Braies.jpg"
-                alt="imagen-Lago-di-Braises"
-              />
-              <img
-                class="element__trash"
-                src="./images/trash.png"
-                alt="imagen-basurero"
-              />
-            </div>
-            <div class="element__name-container">
-              <h3 class="element__name">Lago di Braies</h3>
-              <button class="element__like" type="submit">
-                <img
-                  class="element__like-image"
-                  src="./images/like.svg"
-                  alt="imagen-corazon"
-                />
-              </button>
-            </div>
-          </li>
-        </ul>
-      </section>
+      <section class="elements"></section>
       <section class="popup">
         <div class="popup__close-icon">
           <img
@@ -215,8 +68,72 @@
           </form>
         </div>
       </section>
+      <section class="popup" id="popup-image">
+        <div class="popup__container-imagen">
+          <div class="popup__close-image" id="popup-close-image">
+            <img
+              class="popup__close-icon-image"
+              src="./images/Close-Icon.png"
+              alt="Close-Icon"
+            />
+          </div>
+          <img class="popup-image" src="" alt="" />
+          <h2 class="popup__title-image"></h2>
+        </div>
+      </section>
+      <section class="popup" id="popup-add-card">
+        <div class="popup__close-icon" id="popup-close-card">
+          <img
+            class="popup__close-icon-image"
+            src="./images/Close-Icon.png"
+            alt="Close-Icon"
+          />
+        </div>
+        <div class="popup__container">
+          <form class="popup__form" id="popup-add-card-form">
+            <h2 class="popup__title">Nuevo lugar</h2>
+            <input
+              class="popup__input popup__input-name"
+              type="text"
+              value=""
+              placeholder="Titulo"
+              id="input-title"
+            />
+            <input
+              class="popup__input popup__input-description"
+              type="text"
+              value=""
+              placeholder="Enlace a la imagen"
+              id="input-url"
+            />
+            <button
+              class="popup__button"
+              id="add-card-button-form"
+              type="submit"
+            >
+              Guardar
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer class="footer">&copy; 2020 Mesto Russia</footer>
+    <template class="template-card">
+      <li class="element">
+        <div class="element__image-container">
+          <img class="element__image" src="" alt="" />
+          <img
+            class="element__trash"
+            src="./images/trash.png"
+            alt="imagen-basurero"
+          />
+        </div>
+        <div class="element__name-container">
+          <h3 class="element__name"></h3>
+          <button class="element__like" type="submit"></button>
+        </div>
+      </li>
+    </template>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
