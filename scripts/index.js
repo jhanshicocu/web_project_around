@@ -78,6 +78,7 @@ function createCard(name, link) {
   cardNode.querySelector(".element__image").addEventListener("click", () => {
     popUpImage.classList.add("popup_opened");
     popUpImage.querySelector(".popup-image").src = link;
+    popUpImage.querySelector(".popup-image").alt = "Image de :" + name;
     popUpImage.querySelector(".popup__title-image").textContent = name;
   });
 
