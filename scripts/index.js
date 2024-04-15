@@ -3,6 +3,9 @@ const profileName = document.querySelector(".profile__info-name");
 const profileInfo = document.querySelector(".profile__info-description");
 
 const popUp = document.querySelector(".popup");
+const formContainer = document.querySelector(".popup__container");
+const popUpOverlay = document.querySelector(".popup__overlay");
+
 const buttonClosePopUp = popUp.querySelector(".popup__close-icon-image");
 const formPopUp = popUp.querySelector(".popup__form");
 const nameInput = popUp.querySelector(".popup__input-name");
@@ -47,7 +50,7 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
   },
 ];
-
+//creacion de nuevas targetas y inserimento
 function handleAddCard(evt) {
   evt.preventDefault();
   const cardNode = createCard(titleInput.value, urlInput.value);
@@ -107,6 +110,7 @@ function handleProfileFormSubmit(evt) {
   profileInfo.textContent = jobInput.value;
   popUp.classList.remove("popup_opened");
 }
+
 //abrir y cerrar formulario card
 function openPopUpCard() {
   popUpCard.classList.add("popup_opened");
@@ -125,5 +129,30 @@ formPopUp.addEventListener("submit", handleProfileFormSubmit);
 buttonAddCard.addEventListener("click", openPopUpCard);
 buttonClosePopUpCard.addEventListener("click", closePopUpCard);
 formPopUpCard.addEventListener("submit", handleAddCard);
-//eventos de cerrar
+//evento cerrar popup image
 buttonClosePopUpImage.addEventListener("click", closePopUpImage);
+//eventos de cerrar popup con un click en el popup
+
+//cierre documento con teclado esc
+document.addEventListener("keydown", keyScape);
+function keyScape(evt) {
+  const keyUser = evt.key;
+  if (keyUser === "Escape" && "popup_opened") {
+    closePopUp();
+    closePopUpCard();
+    closePopUpImage();
+    evt.target.removeEventListener("keydown", keyScape);
+  }
+}
+
+//cierre ventana con clic en la superposicion
+const popUpOverlayList = Array.from(
+  document.querySelectorAll(".popup__overlay")
+);
+popUpOverlayList.forEach((popUpOverlayElement) => {
+  popUpOverlayElement.addEventListener("click", () => {
+    closePopUp();
+    closePopUpCard();
+    closePopUpImage();
+  });
+});
