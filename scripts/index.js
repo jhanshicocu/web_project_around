@@ -150,9 +150,11 @@ const popUpOverlayList = Array.from(
   document.querySelectorAll(".popup__overlay")
 );
 popUpOverlayList.forEach((popUpOverlayElement) => {
-  popUpOverlayElement.addEventListener("click", () => {
-    closePopUp();
-    closePopUpCard();
-    closePopUpImage();
+  popUpOverlayElement.addEventListener("click", (evt) => {
+    if (evt.target.classList.contains("popup__overlay")) {
+      closePopUp();
+      closePopUpCard();
+      closePopUpImage();
+    }
   });
 });
