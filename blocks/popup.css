@@ -99,6 +99,7 @@
   color: #cccccc;
   border: 1px solid;
   border-radius: 2px;
+  cursor: not-allowed;
 }
 
 .popup__button:hover {
