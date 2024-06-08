@@ -1,8 +1,9 @@
 export default class Card {
-  constructor(data, cardSelector) {
-    this._name = data.name;
-    this._link = data.link;
+  constructor(name, link, cardSelector, { handleOpenCardClick }) {
+    this._name = name;
+    this._link = link;
     this._cardSelector = cardSelector;
+    this._handleOpenCardClick = handleOpenCardClick;
   }
 
   _getTemplate() {
@@ -11,17 +12,6 @@ export default class Card {
       .content.querySelector(".element")
       .cloneNode(true);
     return cardElement;
-  }
-
-  generateCard() {
-    this._element = this._getTemplate();
-
-    this._element.querySelector(".element__image").src = this._link;
-    this._element.querySelector(".element__name").textContent = this._name;
-    this._element.querySelector(".element__image").alt = this._name;
-    this._setEventListeners();
-
-    return this._element;
   }
 
   _setEventListeners() {
@@ -38,22 +28,32 @@ export default class Card {
     this._element
       .querySelector(".element__image")
       .addEventListener("click", () => {
-        this._handleOpenCardClick();
+        this._handleOpenCardClick(this._name, this._link);
       });
   }
   _handleRemoveCardClick() {
     this._element.remove();
   }
+
   _handleLikeCardClick() {
     this._element
       .querySelector(".element__like")
       .classList.toggle("element__like_active");
   }
-  _handleOpenCardClick() {
-    const popUpImage = document.querySelector("#popup-image");
-    popUpImage.classList.add("popup_opened");
+
+  generateCard() {
+    this._element = this._getTemplate();
+
+    this._element.querySelector(".element__image").src = this._link;
+    this._element.querySelector(".element__name").textContent = this._name;
+    this._element.querySelector(".element__image").alt = this._name;
+    this._setEventListeners();
+
+    return this._element;
+  }
+  /*_handleOpenCardClick() {
     popUpImage.querySelector(".popup-image").src = this._link;
     popUpImage.querySelector(".popup-image").alt = "Image de :" + this._name;
     popUpImage.querySelector(".popup__title-image").textContent = this._name;
-  }
+  }*/
 }

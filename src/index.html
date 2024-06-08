@@ -7,21 +7,20 @@
     <meta name="author" content="Jhancarla Colque" />
     <meta name="keywords" content="Around The U.S., travel, places, U.S." />
     <title>Alrededor de lo EEUU</title>
-    <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body class="page">
     <main class="content">
       <header class="header">
         <img
           class="header__logo"
-          src="./images/header-logo.svg"
+          src="<%=require('./images/header-logo.svg')%>"
           alt="header-logo"
         />
       </header>
       <section class="profile">
         <img
           class="profile__avatar"
-          src="./images/avatar.jpg"
+          src="<%=require('./images/avatar.jpg')%>"
           alt="imagen-avatar"
         />
         <div class="profile__info">
@@ -29,7 +28,7 @@
           <button class="profile__edit-button" type="submit">
             <img
               class="profile__edit-button-image"
-              src="./images/Edit-Button.svg"
+              src="<%=require('./images/Edit-Button.svg')%>"
               alt="boton-lapiz"
             />
           </button>
@@ -38,27 +37,28 @@
         <div class="profile__add-button">
           <img
             class="profile__add-button-image"
-            src="./images/Add-Button.png"
+            src="<%=require('./images/Add-Button.png')%>"
             alt="boton-adjuntar"
           />
         </div>
       </section>
       <section class="elements"></section>
-      <section class="popup">
+      <section class="popup" id="popup-profile">
         <div class="popup__overlay">
           <div class="popup__close-icon">
             <img
               class="popup__close-icon-image"
-              src="./images/Close-Icon.png"
+              src="<%=require('./images/Close-Icon.png')%>"
               alt="Close-Icon"
             />
           </div>
           <div class="popup__container">
-            <form class="popup__form">
+            <form class="popup__form" novalidate>
               <h2 class="popup__title">Editar perfil</h2>
               <input
                 class="popup__input popup__input-name"
                 type="text"
+                name="user"
                 value=""
                 placeholder="nombre"
                 minlength="2"
@@ -70,6 +70,7 @@
               <input
                 class="popup__input popup__input-description"
                 type="text"
+                name="job"
                 value=""
                 placeholder="Acerca de mi"
                 minlength="2"
@@ -89,7 +90,7 @@
             <div class="popup__close-image" id="popup-close-image">
               <img
                 class="popup__close-icon-image"
-                src="./images/Close-Icon.png"
+                src="<%=require('./images/Close-Icon.png')%>"
                 alt="Close-Icon"
               />
             </div>
@@ -103,17 +104,18 @@
           <div class="popup__close-icon" id="popup-close-card">
             <img
               class="popup__close-icon-image"
-              src="./images/Close-Icon.png"
+              src="<%=require('./images/Close-Icon.png')%>"
               alt="Close-Icon"
             />
           </div>
           <div class="popup__container">
-            <form class="popup__form" id="popup-add-card-form">
+            <form class="popup__form" id="popup-add-card-form" novalidate>
               <h2 class="popup__title">Nuevo lugar</h2>
               <input
                 class="popup__input popup__input-name"
                 type="text"
                 value=""
+                name="name"
                 placeholder="Titulo"
                 id="input-title"
                 minlength="2"
@@ -126,6 +128,7 @@
                 type="url"
                 value=""
                 placeholder="Enlace a la imagen"
+                name="link"
                 id="input-url"
                 required
               />
@@ -142,14 +145,14 @@
         </div>
       </section>
     </main>
-    <footer class="footer">&copy; 2020 Mesto Russia</footer>
+    <footer class="footer">&copy; 2024 Jhancarla Colque</footer>
     <template class="template-card template-card_type_default">
-      <li class="element">
+      <div class="element">
         <div class="element__image-container">
           <img class="element__image" src=" " alt=" " />
           <img
             class="element__trash"
-            src="./images/trash.png"
+            src="<%=require('./images/trash.png')%>"
             alt="imagen-basurero"
           />
         </div>
@@ -157,8 +160,7 @@
           <h3 class="element__name"></h3>
           <button class="element__like" type="submit"></button>
         </div>
-      </li>
+      </div>
     </template>
-    <script type="module" src="./scripts/index.js"></script>
   </body>
 </html>
