@@ -14,11 +14,3 @@ export default class UserInfo {
     this._job.textContent = job;
   }
 }
-
-//interatividad formulario perfil
-/*function handleProfileFormSubmit(evt) {
-  evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileInfo.textContent = jobInput.value;
-  popUp.classList.remove("popup_opened");
-}*/

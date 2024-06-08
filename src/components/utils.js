@@ -25,29 +25,44 @@ export const initialCards = [
   },
 ];
 export const elementsArea = document.querySelector(".elements");
+const titleInput = document.querySelector("#input-title");
+const urlInput = document.querySelector("#input-url");
 
-//cierre documento con teclado esc
-/*document.addEventListener("keydown", keyScape);
-function keyScape(evt) {
-  const keyUser = evt.key;
-  if (keyUser === "Escape" && "popup_opened") {
-    closePopUp();
-    closePopUpCard();
-    closePopUpImage();
-    evt.target.removeEventListener("keydown", keyScape);
-  }
-}*/
-//eventos de cerrar popup con un click en el popup
-//cierre ventana con clic en la superposicion
-/*const popUpOverlayList = Array.from(
-  document.querySelectorAll(".popup__overlay")
+export const buttonEditProfile = document.querySelector(
+  ".profile__edit-button"
 );
-popUpOverlayList.forEach((popUpOverlayElement) => {
-  popUpOverlayElement.addEventListener("click", (evt) => {
-    if (evt.target.classList.contains("popup__overlay")) {
-      closePopUp();
-      closePopUpCard();
-      closePopUpImage();
-    }
-  });
-});*/
+export const profileName = document.querySelector(".profile__info-name");
+export const profileInfo = document.querySelector(".profile__info-description");
+
+export const popUp = document.querySelector(".popup");
+const formContainer = document.querySelector(".popup__container");
+const popUpOverlay = document.querySelector(".popup__overlay");
+
+export const formPopUp = popUp.querySelector(".popup__form");
+export const nameInput = popUp.querySelector(".popup__input-name");
+export const jobInput = popUp.querySelector(".popup__input-description");
+
+export const buttonAddCard = document.querySelector(
+  ".profile__add-button-image"
+);
+
+export const popUpCard = document.querySelector("#popup-add-card");
+const formPopUpCard = document.querySelector("#popup-add-card-form");
+
+export const formEditProfile = {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+};
+
+export const formAddCards = {
+  formSelector: "#popup-add-card-form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+};

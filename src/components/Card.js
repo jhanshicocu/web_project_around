@@ -51,9 +51,4 @@ export default class Card {
 
     return this._element;
   }
-  /*_handleOpenCardClick() {
-    popUpImage.querySelector(".popup-image").src = this._link;
-    popUpImage.querySelector(".popup-image").alt = "Image de :" + this._name;
-    popUpImage.querySelector(".popup__title-image").textContent = this._name;
-  }*/
 }
